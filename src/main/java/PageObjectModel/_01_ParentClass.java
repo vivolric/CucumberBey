@@ -27,6 +27,7 @@ public class _01_ParentClass {
 
         waitUntilClickable(element);
         element.click();
+
     }
 
 //    Send keys function
@@ -42,6 +43,7 @@ public class _01_ParentClass {
     public void waitUntilVisible(WebElement elementToWait){
 
         wait.until(ExpectedConditions.visibilityOf(elementToWait));
+
     }
 
 
@@ -56,6 +58,14 @@ public class _01_ParentClass {
 
         waitUntilVisible(element);
         Assert.assertTrue(element.getText().contains(myText));
+    }
+
+    public void waiting(int howLong){
+        try {
+            Thread.sleep(howLong);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 }

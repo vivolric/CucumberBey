@@ -32,8 +32,8 @@ public class _04_CountriesStep {
     public void user_create_a_country(){
 
         dialogContent.findElementAndClickFunction("AddButton");
-        dialogContent.findElementAndSendKeysFunction("NameInput" , "veliCountry");
-        dialogContent.findElementAndSendKeysFunction("CodeInput" , "v1");
+        dialogContent.findElementAndSendKeysFunction("NameInput" , "AliCountry");
+        dialogContent.findElementAndSendKeysFunction("CodeInput" , "a1");
         dialogContent.findElementAndClickFunction("SaveButton");
 
     }
@@ -45,10 +45,13 @@ public class _04_CountriesStep {
         dialogContent.findElementAndSendKeysFunction("NameInput" , name);
         dialogContent.findElementAndSendKeysFunction("CodeInput" , code);
         dialogContent.findElementAndClickFunction("SaveButton");
+
     }
 
     @Then("^Success message should be displayed$")
     public void success_message_should_be_displayed() {
+
         dialogContent.findElementAndVerifyElementContainText("SuccessfullyMessage" , "successfully");
+
     }
 }

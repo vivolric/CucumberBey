@@ -24,8 +24,10 @@ public class _05_NationalitiesStep {
     public void user_create_a_Nationalities() {
 
         dialogContent.findElementAndClickFunction("AddButton");
-        dialogContent.findElementAndSendKeysFunction("NameInput" , "veliCountry");
+        dialogContent.findElementAndSendKeysFunction("NameInput" , "AliCountry");
         dialogContent.findElementAndClickFunction("SaveButton");
 
     }
+
+
 }
