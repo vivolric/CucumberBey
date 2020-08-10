@@ -2,8 +2,12 @@ package StepDefinition;
 
 import PageObjectModel.DialogContent;
 import PageObjectModel.LeftNavElements;
+import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import java.util.List;
 
 public class _07_Fees {
 
@@ -18,7 +22,6 @@ public class _07_Fees {
         leftNavElements.findElementAndClickFunction("ParametersButton");
         leftNavElements.findElementAndClickFunction("Fees");
 
-
     }
 
     @When("^User create a country name as \"([^\"]*)\" code as \"([^\"]*)\" integration code as \"([^\"]*)\" priority as \"([^\"]*)\"$")
@@ -32,5 +35,8 @@ public class _07_Fees {
         dialogContent.findElementAndClickFunction("SaveButton");
 
     }
+
+
+
 
 }
