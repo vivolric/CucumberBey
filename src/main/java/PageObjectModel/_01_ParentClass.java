@@ -50,6 +50,7 @@ public class _01_ParentClass {
 //    WaitForClickable
     public void waitUntilClickable(WebElement elmentToWait){
 
+//        wait until clickable is working as if the element is not visible
         wait.until(ExpectedConditions.elementToBeClickable(elmentToWait));
     }
 
@@ -64,7 +65,7 @@ public class _01_ParentClass {
         try {
             Thread.sleep(howLong);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+             e.printStackTrace();
         }
     }
 

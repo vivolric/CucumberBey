@@ -3,6 +3,7 @@
 
 Feature: Citizenship functionality
 
+
   Scenario: Create a Citizenship
 
     Given Navigate to basqar
@@ -12,6 +13,7 @@ Feature: Citizenship functionality
     When User create a Citizenship name as "AliCitizenship" short name as "AC"
     Then Success message should be displayed
 
+
   Scenario: Edit a Citizenship
 
     Given Navigate to basqar
@@ -20,6 +22,7 @@ Feature: Citizenship functionality
     And Navigate to Citizenship page
     When User edit the "AliCitizenship" to "AliEditedCitizenship"
     Then Success message should be displayed
+
 
   Scenario: Delete a Citizenship
 

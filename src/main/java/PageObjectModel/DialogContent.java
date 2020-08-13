@@ -17,7 +17,7 @@ public class DialogContent extends _01_ParentClass{
 
     }
 
-    @FindBy(xpath = "//ms-add-button//button")
+    @FindBy(xpath = "//ms-add-button[contains(@tooltip,'TITLE.ADD')]//button")
     private WebElement AddButton;
 
     @FindBy(xpath = "//ms-text-field[@formcontrolname='name']/input")
@@ -84,7 +84,6 @@ public class DialogContent extends _01_ParentClass{
     public void findElementAndClickFunction(String ElementName){
 
         switch (ElementName){
-
             case "AddButton":
                 myElement = AddButton;
                 break;
@@ -142,7 +141,6 @@ public class DialogContent extends _01_ParentClass{
         public void findElementAndVerifyElementContainText(String elementName , String WhichText){
 
             switch (elementName){
-
                 case "SuccessfullyMessage":
                     myElement=SuccessfullyMessage;
                     break;

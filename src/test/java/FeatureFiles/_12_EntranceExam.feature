@@ -1,5 +1,6 @@
 Feature: Entrance Examinations functionality
 
+  @RegressionTest
   Scenario: Create exam
 
     Given Navigate to basqar
@@ -60,8 +61,6 @@ Feature: Entrance Examinations functionality
       | EntranceExamsChild  |
     When User delete the "AliExam"
     Then Success message should be displayed
-
-
 
 
 #    Scenario outline vs Data table
