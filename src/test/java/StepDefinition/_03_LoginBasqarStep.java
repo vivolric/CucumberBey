@@ -46,6 +46,12 @@ public class _03_LoginBasqarStep {
         WebElement verifyLogin = driver.findElement(By.xpath("//span[text()='Dashboard']"));
         Assert.assertNotNull(verifyLogin);
 
+        try {
+            Thread.sleep(8000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }

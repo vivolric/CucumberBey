@@ -1,0 +1,21 @@
+<suite name ="suite1" parallel = "tests" thread-count="2">
+
+    <test name = "firefox">
+
+        <parameter name="browser" value = "firefox"/>
+        <classes>
+            <class name="Runners.End2EndScenario"/>
+            <class name="Runners.End2EndScenario2"/>
+        </classes>
+    </test>
+
+    <test name = "chrome">
+        <parameter name="browser" value = "chrome"/>
+        <classes>
+            <class name="Runners.End2EndScenario2"/>
+            <class name="Runners.End2EndScenario"/>
+        </classes>
+    </test>
+</suite>
+
+

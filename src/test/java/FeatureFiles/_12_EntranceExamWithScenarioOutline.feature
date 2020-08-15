@@ -40,4 +40,4 @@ Feature: Entrance Examinations functionality
 
 #    AcademicPeriodOption click on 2 grade level click on 4 th option documentTypeOption4 th option
 
-#    try catch... if no such element exception, then click random on the other element?
+#    try catch... if no such element exeption, then click random on the other element?
