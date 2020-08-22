@@ -1,6 +1,7 @@
 package StepDefinition;
 
 import Utilities.Driver;
+import Utilities.WriteInExcelReusableMethod;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -29,6 +30,7 @@ public class Hooks {
 
 //    This after annotation will run the code after each scenario
 //      We should import it from cucumber.api.java
+//    Cucumber is providing the scenario object
     @After
     public void after(Scenario scenario){
 
@@ -64,11 +66,7 @@ public class Hooks {
             }
         }
 
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        WriteInExcelReusableMethod.writeInExcelReusable("src\\main\\resources\\Results.xlsx", "Sheet1",scenario);
 
         Driver.QuitDriver();
 

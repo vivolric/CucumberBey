@@ -1,5 +1,6 @@
 package StepDefinition;
 
+import PageObjectModel.FormsClass;
 import Utilities.Driver;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -15,6 +16,8 @@ import org.testng.Assert;
 public class _03_LoginBasqarStep {
 
     WebDriver driver;
+    FormsClass formsClass = new FormsClass();
+
 
     @Given("^Navigate to basqar$")
     public void navigate_to_basqar() {
@@ -37,7 +40,7 @@ public class _03_LoginBasqarStep {
         driver.findElement(By.id("mat-input-1")).sendKeys("TechnoStudy123@");
 
         driver.findElement(By.cssSelector("button[aria-label='LOGIN']")).click();
-
+        formsClass.findElementAndClickFunction("gotItButton");
     }
 
     @Then("^User should login successfully$")
@@ -47,7 +50,7 @@ public class _03_LoginBasqarStep {
         Assert.assertNotNull(verifyLogin);
 
         try {
-            Thread.sleep(8000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
